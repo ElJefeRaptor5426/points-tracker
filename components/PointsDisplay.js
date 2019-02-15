@@ -21,6 +21,7 @@ export default class PointsDisplay extends React.Component {
 const styles = StyleSheet.create({
   display: {
     color: '#000',
-    fontSize: 42
+    fontSize: 42,
+    textAlign: 'center',
   }
 })
