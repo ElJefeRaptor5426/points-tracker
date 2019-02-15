@@ -1,13 +1,19 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import AppContext from '../AppContext';
 
 export default class PointsDisplay extends React.Component {
   render() {
     return (
-      <View style={styles.display}>
-        <Text
-        style={styles.display}>{this.props.points}</Text>
-      </View>
+      <AppContext.Consumer>
+        {context => (
+          <View style={styles.display}>
+            <Text>Points:</Text>
+            <Text
+            style={styles.display}>{context.points}</Text>
+          </View>
+        )}
+      </AppContext.Consumer>
     );
   }
 }
