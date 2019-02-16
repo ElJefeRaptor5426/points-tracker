@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-native';
+import PointsButton from './PointsButton';
 import AppContext from '../AppContext';
 
 export default class DecrementButton extends React.Component {
@@ -7,7 +7,7 @@ export default class DecrementButton extends React.Component {
     let props = this.props;
     return (
       <AppContext.Consumer>
-        {context => (<Button title={props.title} onPress={context.subPoint} />)}
+        {context => (<PointsButton title={props.title} onPress={context.subPoint} color='red' />)}
       </AppContext.Consumer>
     )
   }

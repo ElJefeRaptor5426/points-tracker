@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-native';
+import PointsButton from './PointsButton';
 import AppContext from '../AppContext';
 
 export default class IncrementButton extends React.Component {
@@ -8,8 +8,7 @@ export default class IncrementButton extends React.Component {
     return (
       <AppContext.Consumer>
         {context => {
-          console.log(context);
-          return (<Button title={props.title} onPress={context.addPoint} />)
+          return (<PointsButton title={props.title} onPress={context.addPoint} color='green' />)
           }}
       </AppContext.Consumer>
     )
