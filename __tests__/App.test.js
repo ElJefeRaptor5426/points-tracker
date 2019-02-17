@@ -1,11 +1,12 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import {shallow, render} from 'enzyme';
 import App from '../App';
+import React from 'react';
+import renderer from 'react-test-renderer';
 
 describe('App component', () => {
   it('should render correctly', () => {
-    const wrapper = shallow(<App />)
-    expect(wrapper).toMatchSnapshot();
+    const wrapper = renderer.create(<App />)
+    expect(wrapper.toJSON()).toMatchSnapshot();
   })
 })
 

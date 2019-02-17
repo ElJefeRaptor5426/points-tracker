@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Points component should render correctly 1`] = `ShallowWrapper {}`;
+exports[`Points component should render correctly 1`] = `
+<Text>
+  0
+</Text>
+`;

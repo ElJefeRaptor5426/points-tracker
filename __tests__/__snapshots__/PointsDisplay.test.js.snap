@@ -1,3 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PointsDisplay component should render correctly 1`] = `ShallowWrapper {}`;
+exports[`PointsDisplay component should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "color": "#000",
+      "fontSize": 42,
+      "textAlign": "center",
+    }
+  }
+>
+  <Text>
+    Points:
+  </Text>
+  <Text>
+    0
+  </Text>
+</View>
+`;

@@ -11,21 +11,23 @@
     "expo": "^32.0.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-native-navigation": "^2.11.0"
+    "react-native-gesture-handler": "^1.0.15",
+    "react-native-navigation": "^2.12.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
-    "enzyme": "^3.8.0",
+    "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "jest": "^24.1.0",
     "jest-expo": "^32.0.0",
     "react-addons-test-utils": "^15.6.2",
-    "react-dom": "^16.8.2"
+    "react-dom": "^16.8.2",
+    "react-test-renderer": "^16.8.2"
   },
   "jest": {
     "preset": "jest-expo",
     "setupFilesAfterEnv": [
-      "<rootDir>/jestSetup.js"
+      "<rootDir>jestSetup.js"
     ]
   },
   "private": true

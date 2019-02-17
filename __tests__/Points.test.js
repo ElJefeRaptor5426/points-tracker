@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 import { Text } from 'react-native'
 import Points from '../components/Points';
 
@@ -7,17 +7,17 @@ Text.displayName = 'Text';
 
 describe('Points component', () => {
   it('should render correctly', () => {
-    const wrapper = shallow(<Points />, {points: 0})
-    expect(wrapper).toMatchSnapshot();
+    const wrapper = renderer.create(<Points points={0} />);
+    expect(wrapper.toJSON()).toMatchSnapshot();
   });
 
   it('should have 1 Text component', () => {
-    const wrapper = shallow(<Points points={0}/>);
-    expect(wrapper.find('Text').length).toBe(1)
+    const wrapper = renderer.create(<Points points={0}/>);
+    expect(wrapper.root.findAll(el => el.type === 'Text').length).toBe(1)
   })
 
   it('should have text showing the number of points', () => {
-    const wrapper = shallow(<Points points={0}/>);
-    expect(wrapper.contains(<Text>0</Text>)).toBe(true);
+    const wrapper = renderer.create(<Points points={0}/>);
+    expect(wrapper.root.findByType(Text).props.children).toEqual(0)
   })
 })
